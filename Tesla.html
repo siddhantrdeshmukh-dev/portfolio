@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project: Tesla Coil - Siddhant Deshmukh</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" xintegrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* slate-50 */
+            color: #334155; /* slate-700 */
+        }
+        .back-link {
+            transition: transform 0.3s ease;
+        }
+        .back-link:hover {
+            transform: translateX(-5px);
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+</head>
+<body class="antialiased bg-slate-50 dark:bg-slate-900 text-slate-700 dark:text-slate-300 transition-colors duration-300">
+
+    <!-- Header -->
+    <header class="bg-white dark:bg-slate-800 shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="back-link text-purple-600 dark:text-purple-400 font-semibold">
+                <i class="fas fa-arrow-left mr-2"></i>
+                Back to Portfolio
+            </a>
+            <p class="text-xl font-bold text-slate-800 dark:text-white">Siddhant Deshmukh</p>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-12 md:py-20">
+
+        <!-- Project Header -->
+        <section class="text-center mb-16">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 dark:text-white mb-4">Tesla Coil</h1>
+            <p class="text-lg text-slate-500 dark:text-slate-400 max-w-3xl mx-auto">A hands-on electronics project to build a resonant transformer circuit for demonstrating high-voltage, wireless power transmission.</p>
+        </section>
+
+        <!-- Project Hero Image -->
+        <section class="mb-16">
+            <img src="images\teslanew8.jpg" alt="Tesla Coil" class="w-full h-auto rounded-xl shadow-2xl object-cover">
+        </section>
+
+        <!-- Project Details -->
+        <section class="grid md:grid-cols-3 gap-12">
+            <!-- Left Column: Key Info -->
+            <div class="md:col-span-1">
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold text-slate-800 dark:text-white mb-4 border-b border-slate-200 dark:border-slate-700 pb-2">Project Info</h3>
+                    <ul class="space-y-3 text-slate-600 dark:text-slate-300">
+                        <li><strong class="font-semibold text-slate-700 dark:text-slate-200">My Role:</strong> Project Lead / Designer</li>
+                        <li><strong class="font-semibold text-slate-700 dark:text-slate-200">Category:</strong> Personal Electronics Project</li>
+                        <li><strong class="font-semibold text-slate-700 dark:text-slate-200">Core Skills:</strong> Electronics, Circuit Design, High-Voltage Safety</li>
+                        <li><strong class="font-semibold text-slate-700 dark:text-slate-200">Key Achievement:</strong> Successful Wireless Power Demo</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Right Column: Description -->
+            <div class="md:col-span-2">
+                <div class="space-y-6 text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+                    <h3 class="text-2xl font-bold text-slate-800 dark:text-white">Project Overview</h3>
+                    <p>
+                        This project was a deep dive into the principles of electromagnetism and resonant energy transfer. The goal was to design, source, and construct a functional spark gap Tesla coil capable of wirelessly illuminating fluorescent bulbs from a distance, showcasing the fascinating physics behind Nikola Tesla's invention.
+                    </p>
+                    <h3 class="text-2xl font-bold text-slate-800 dark:text-white mt-4">Key Responsibilities</h3>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>Researched and calculated the required specifications for the primary and secondary coils, capacitor bank, and spark gap to achieve resonance.</li>
+                        <li>Sourced all high-voltage components, including a neon-sign transformer, high-voltage capacitors, and copper wiring.</li>
+                        <li>Carefully constructed the circuit, with a strong emphasis on high-voltage safety protocols, proper grounding, and insulation.</li>
+                        <li>Assembled and wound the coils, built the spark gap, and integrated all components into a stable, functional unit.</li>
+                        <li>Successfully tested and demonstrated the coil's ability to generate a high-frequency corona discharge and wirelessly power nearby fluorescent tubes.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Image Gallery -->
+        <section class="py-20">
+            <h2 class="text-3xl font-bold text-slate-800 dark:text-white mb-8 text-center">Project Gallery</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <img src="images\teslanew1.jpg" alt="Gallery Image 1" class="rounded-lg shadow-md w-full h-full object-cover">
+                <img src="images\teslanew3.jpg" alt="Gallery Image 2" class="rounded-lg shadow-md w-full h-full object-cover">
+                <img src="images\teslanew4.jpg" alt="Gallery Image 3" class="rounded-lg shadow-md w-full h-full object-cover">
+                <img src="images\teslanew5.jpg" alt="Gallery Image 4" class="rounded-lg shadow-md w-full h-full object-cover">
+                <img src="images\teslanew6.jpg" alt="Gallery Image 5" class="rounded-lg shadow-md w-full h-full object-cover">
+                <div class="rounded-lg shadow-md overflow-hidden">
+                    <video autoplay loop muted playsinline width="640" height="160">
+                    <source src="images\teslavideo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                    </video>
+                </div>
+        </section>
+        
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-800 dark:bg-slate-950 text-white mt-10">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p>&copy; 2024 Siddhant Deshmukh. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Theme Toggle Button -->
+    <button id="theme-toggle" class="fixed bottom-5 right-5 z-50 bg-white dark:bg-slate-700 text-slate-800 dark:text-slate-200 w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-transform duration-300 hover:scale-110">
+        <i class="fas fa-sun"></i>
+    </button>
+
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const htmlEl = document.documentElement;
+
+        if (localStorage.getItem('theme') === 'dark') {
+            htmlEl.classList.add('dark');
+            themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        } else {
+            htmlEl.classList.remove('dark');
+            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        }
+
+        themeToggle.addEventListener('click', () => {
+            htmlEl.classList.toggle('dark');
+            if (htmlEl.classList.contains('dark')) {
+                localStorage.setItem('theme', 'dark');
+                themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+            } else {
+                localStorage.setItem('theme', 'light');
+                themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+            }
+        });
+    </script>
+
+</body>
+</html>

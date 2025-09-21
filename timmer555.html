@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project: Timer 555 Project - Siddhant Deshmukh</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" xintegrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* slate-50 */
+            color: #334155; /* slate-700 */
+        }
+        .back-link {
+            transition: transform 0.3s ease;
+        }
+        .back-link:hover {
+            transform: translateX(-5px);
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+</head>
+<body class="antialiased bg-slate-50 dark:bg-slate-900 text-slate-700 dark:text-slate-300 transition-colors duration-300">
+
+    <!-- Header -->
+    <header class="bg-white dark:bg-slate-800 shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="back-link text-amber-500 dark:text-amber-400 font-semibold">
+                <i class="fas fa-arrow-left mr-2"></i>
+                Back to Portfolio
+            </a>
+            <p class="text-xl font-bold text-slate-800 dark:text-white">Siddhant Deshmukh</p>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-12 md:py-20">
+
+        <!-- Project Header -->
+        <section class="text-center mb-16">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 dark:text-white mb-4">Timer 555 Project</h1>
+            <p class="text-lg text-slate-500 dark:text-slate-400 max-w-3xl mx-auto">An exploration of the versatile 555 timer IC through the creation of various practical electronic circuits.</p>
+        </section>
+
+        <!-- Project Hero Image -->
+        <section class="mb-16">
+            <img src="images\timer.jpg" alt="Timer 555 Project" class="w-full h-auto rounded-xl shadow-2xl object-cover">
+        </section>
+
+        <!-- Project Details -->
+        <section class="grid md:grid-cols-3 gap-12">
+            <!-- Left Column: Key Info -->
+            <div class="md:col-span-1">
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold text-slate-800 dark:text-white mb-4 border-b border-slate-200 dark:border-slate-700 pb-2">Project Info</h3>
+                    <ul class="space-y-3 text-slate-600 dark:text-slate-300">
+                        <li><strong class="font-semibold text-slate-700 dark:text-slate-200">My Role:</strong> Circuit Designer / Hobbyist</li>
+                        <li><strong class="font-semibold text-slate-700 dark:text-slate-200">Category:</strong> Personal Electronics Project</li>
+                        <li><strong class="font-semibold text-slate-700 dark:text-slate-200">Core Skills:</strong> Circuit Design, Soldering, Prototyping</li>
+                        <li><strong class="font-semibold text-slate-700 dark:text-slate-200">Key Achievement:</strong> Built Multiple Functional Circuits</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Right Column: Description -->
+            <div class="md:col-span-2">
+                <div class="space-y-6 text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+                    <h3 class="text-2xl font-bold text-slate-800 dark:text-white">Project Overview</h3>
+                    <p>
+                        This project was a hands-on study of one of the most popular integrated circuits ever made: the 555 timer. The objective was to understand its inner workings by building a series of circuits that utilized its three main operating modes: astable, monostable, and bistable.
+                    </p>
+                    <h3 class="text-2xl font-bold text-slate-800 dark:text-white mt-4">Key Responsibilities</h3>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>Researched and understood the theoretical principles behind the 555 timer's functionality and its different modes.</li>
+                        <li>Designed various circuits on breadboards for rapid prototyping, including an LED flasher (astable mode) and a push-button timer (monostable mode).</li>
+                        <li>Calculated the correct resistor and capacitor values to achieve desired frequencies and time delays for each circuit.</li>
+                        <li>Practiced soldering skills by creating permanent versions of the circuits on perfboards.</li>
+                        <li>Troubleshot and debugged circuits to ensure they functioned as designed, deepening my understanding of practical electronics.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Image Gallery -->
+        <section class="py-20">
+            <h2 class="text-3xl font-bold text-slate-800 dark:text-white mb-8 text-center">Project Gallery</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <img src="images\timer4.jpg" alt="Gallery Image 2" class="rounded-lg shadow-md w-full h-full object-cover">
+                <img src="images\timer3.jpg" alt="Gallery Image 3" class="rounded-lg shadow-md w-full h-full object-cover">
+                <img src="images\timer5.jpg" alt="Gallery Image 4" class="rounded-lg shadow-md w-full h-full object-cover">
+             </div>
+        </section>
+        
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-800 dark:bg-slate-950 text-white mt-10">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p>&copy; 2024 Siddhant Deshmukh. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Theme Toggle Button -->
+    <button id="theme-toggle" class="fixed bottom-5 right-5 z-50 bg-white dark:bg-slate-700 text-slate-800 dark:text-slate-200 w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-transform duration-300 hover:scale-110">
+        <i class="fas fa-sun"></i>
+    </button>
+
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const htmlEl = document.documentElement;
+
+        if (localStorage.getItem('theme') === 'dark') {
+            htmlEl.classList.add('dark');
+            themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        } else {
+            htmlEl.classList.remove('dark');
+            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        }
+
+        themeToggle.addEventListener('click', () => {
+            htmlEl.classList.toggle('dark');
+            if (htmlEl.classList.contains('dark')) {
+                localStorage.setItem('theme', 'dark');
+                themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+            } else {
+                localStorage.setItem('theme', 'light');
+                themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+            }
+        });
+    </script>
+
+</body>
+</html>

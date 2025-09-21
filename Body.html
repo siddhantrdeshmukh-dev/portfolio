@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project: Body Naturals - Siddhant Deshmukh</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" xintegrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* slate-50 */
+            color: #334155; /* slate-700 */
+        }
+        .back-link {
+            transition: transform 0.3s ease;
+        }
+        .back-link:hover {
+            transform: translateX(-5px);
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+</head>
+<body class="antialiased bg-slate-50 dark:bg-slate-900 text-slate-700 dark:text-slate-300 transition-colors duration-300">
+
+    <!-- Header -->
+    <header class="bg-white dark:bg-slate-800 shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="back-link text-pink-500 dark:text-pink-400 font-semibold">
+                <i class="fas fa-arrow-left mr-2"></i>
+                Back to Portfolio
+            </a>
+            <p class="text-xl font-bold text-slate-800 dark:text-white">Siddhant Deshmukh</p>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-12 md:py-20">
+
+        <!-- Project Header -->
+        <section class="text-center mb-16">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 dark:text-white mb-4">Body Naturals</h1>
+            <p class="text-lg text-slate-500 dark:text-slate-400 max-w-3xl mx-auto">A business concept for a new brand of organic skincare products, from market research to brand identity.</p>
+        </section>
+
+        <!-- Project Hero Image -->
+        <section class="mb-16">
+            <img src="images\body5.jpg" alt="Body Naturals" class="w-full h-auto rounded-xl shadow-2xl object-cover">
+        </section>
+
+        <!-- Project Details -->
+        <section class="grid md:grid-cols-3 gap-12">
+            <!-- Left Column: Key Info -->
+            <div class="md:col-span-1">
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold text-slate-800 dark:text-white mb-4 border-b border-slate-200 dark:border-slate-700 pb-2">Project Info</h3>
+                    <ul class="space-y-3 text-slate-600 dark:text-slate-300">
+                        <li><strong class="font-semibold text-slate-700 dark:text-slate-200">My Role:</strong> Founder / Brand Strategist</li>
+                        <li><strong class="font-semibold text-slate-700 dark:text-slate-200">Category:</strong> Business Concept / Entrepreneurship</li>
+                        <li><strong class="font-semibold text-slate-700 dark:text-slate-200">Core Skills:</strong> Market Research, Brand Development, Product Strategy</li>
+                        <li><strong class="font-semibold text-slate-700 dark:text-slate-200">Key Achievement:</strong> Comprehensive Go-to-Market Plan</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Right Column: Description -->
+            <div class="md:col-span-2">
+                <div class="space-y-6 text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+                    <h3 class="text-2xl font-bold text-slate-800 dark:text-white">Project Overview</h3>
+                    <p>
+                        Body Naturals was a conceptual project to develop a complete business plan for a direct-to-consumer organic skincare brand. The core idea was to create a line of products using ethically sourced, natural ingredients, presented in sustainable packaging, and marketed to a health-conscious, millennial audience.
+                    </p>
+                    <h3 class="text-2xl font-bold text-slate-800 dark:text-white mt-4">Key Responsibilities</h3>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>Conducted in-depth market research to identify target demographics, analyze competitors, and find a unique niche in the crowded skincare market.</li>
+                        <li>Defined the brand's mission, vision, and unique selling proposition, focusing on transparency and sustainability.</li>
+                        <li>Developed a hypothetical product line strategy, including key ingredients, product formulations, and pricing structure.</li>
+                        <li>Created a comprehensive go-to-market plan that covered branding, packaging design, e-commerce strategy, and a digital marketing launch campaign.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Image Gallery -->
+        <section class="py-20">
+            <h2 class="text-3xl font-bold text-slate-800 dark:text-white mb-8 text-center">Project Gallery</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <img src="images\body4.jpg" alt="Gallery Image 1" class="rounded-lg shadow-md w-full h-full object-cover">
+                <img src="images\body3.jpeg" alt="Gallery Image 2" class="rounded-lg shadow-md w-full h-full object-cover">
+                <img src="images\body1.jpg" alt="Gallery Image 3" class="rounded-lg shadow-md w-full h-full object-cover">
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-800 dark:bg-slate-950 text-white mt-10">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p>&copy; 2024 Siddhant Deshmukh. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Theme Toggle Button -->
+    <button id="theme-toggle" class="fixed bottom-5 right-5 z-50 bg-white dark:bg-slate-700 text-slate-800 dark:text-slate-200 w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-transform duration-300 hover:scale-110">
+        <i class="fas fa-sun"></i>
+    </button>
+
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const htmlEl = document.documentElement;
+
+        if (localStorage.getItem('theme') === 'dark') {
+            htmlEl.classList.add('dark');
+            themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        } else {
+            htmlEl.classList.remove('dark');
+            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        }
+
+        themeToggle.addEventListener('click', () => {
+            htmlEl.classList.toggle('dark');
+            if (htmlEl.classList.contains('dark')) {
+                localStorage.setItem('theme', 'dark');
+                themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+            } else {
+                localStorage.setItem('theme', 'light');
+                themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+            }
+        });
+    </script>
+
+</body>
+</html>

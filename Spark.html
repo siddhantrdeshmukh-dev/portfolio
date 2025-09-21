@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project: Spark Racing Formula - Siddhant Deshmukh</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" xintegrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* slate-50 */
+            color: #334155; /* slate-700 */
+        }
+        .back-link {
+            transition: transform 0.3s ease;
+        }
+        .back-link:hover {
+            transform: translateX(-5px);
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+</head>
+<body class="antialiased bg-slate-50 dark:bg-slate-900 text-slate-700 dark:text-slate-300 transition-colors duration-300">
+
+    <!-- Header -->
+    <header class="bg-white dark:bg-slate-800 shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="back-link text-green-600 dark:text-green-400 font-semibold">
+                <i class="fas fa-arrow-left mr-2"></i>
+                Back to Portfolio
+            </a>
+            <p class="text-xl font-bold text-slate-800 dark:text-white">Siddhant Deshmukh</p>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-12 md:py-20">
+
+        <!-- Project Header -->
+        <section class="text-center mb-16">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 dark:text-white mb-4">Spark Racing Formula</h1>
+            <p class="text-lg text-slate-500 dark:text-slate-400 max-w-3xl mx-auto">Developing a comprehensive business strategy and securing sponsorships for a competitive Formula Student racing team.</p>
+        </section>
+
+        <!-- Project Hero Image -->
+        <section class="mb-16">
+            <img src="https://static.wixstatic.com/media/9e43e7_39bf703dd3474ccb91352033317d14b4~mv2.png/v1/fill/w_980,h_551,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/9e43e7_39bf703dd3474ccb91352033317d14b4~mv2.png" alt="Spark Racing Formula Team" class="w-full h-auto rounded-xl shadow-2xl object-cover">
+        </section>
+
+        <!-- Project Details -->
+        <section class="grid md:grid-cols-3 gap-12">
+            <!-- Left Column: Key Info -->
+            <div class="md:col-span-1">
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold text-slate-800 dark:text-white mb-4 border-b border-slate-200 dark:border-slate-700 pb-2">Project Info</h3>
+                    <ul class="space-y-3 text-slate-600 dark:text-slate-300">
+                        <li><strong class="font-semibold text-slate-700 dark:text-slate-200">My Role:</strong> Admin Team Member</li>
+                        <li><strong class="font-semibold text-slate-700 dark:text-slate-200">Organization:</strong> Spark Racing Team (Pillai College)</li>
+                        <li><strong class="font-semibold text-slate-700 dark:text-slate-200">Core Skills:</strong> Business Strategy, Sponsorship, Public Speaking</li>
+                        <li><strong class="font-semibold text-slate-700 dark:text-slate-200">Key Achievement:</strong> Successful Business Plan Presentation</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Right Column: Description -->
+            <div class="md:col-span-2">
+                <div class="space-y-6 text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+                    <h3 class="text-2xl font-bold text-slate-800 dark:text-white">Project Overview</h3>
+                    <p>
+                        As a core member of the administrative and business strategy team for Spark Racing, I was instrumental in the non-engineering aspects of our Formula Student competition entry. This role required a blend of strategic planning, financial management, and persuasive communication to ensure the team was well-funded and organized.
+                    </p>
+                    <h3 class="text-2xl font-bold text-slate-800 dark:text-white mt-4">Key Responsibilities</h3>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>Developed and authored the official Business Plan Presentation (BPP) for the competition, outlining our team's market strategy, financial projections, and operational plans.</li>
+                        <li>Led sponsorship acquisition efforts, identifying potential corporate partners and pitching the team's value proposition to secure funding and in-kind support.</li>
+                        <li>Managed team logistics, including vendor coordination for parts and travel arrangements for competition events.</li>
+                        <li>Presented the business plan to judges and potential sponsors, honing public speaking and presentation skills in a high-pressure environment.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Image Gallery -->
+        <section class="py-20">
+            <h2 class="text-3xl font-bold text-slate-800 dark:text-white mb-8 text-center">Project Gallery</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <img src="images\spark2.png" alt="Gallery Image 1" class="rounded-lg shadow-md w-full h-full object-cover">
+                <img src="images\spark1.png" alt="Gallery Image 2" class="rounded-lg shadow-md w-full h-full object-cover">
+                <img src="images\spark3.jpg" alt="Gallery Image 3" class="rounded-lg shadow-md w-full h-full object-cover">
+            </div>
+        </section>
+        
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-800 dark:bg-slate-950 text-white mt-10">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p>&copy; 2025 Siddhant Deshmukh. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Theme Toggle Button -->
+    <button id="theme-toggle" class="fixed bottom-5 right-5 z-50 bg-white dark:bg-slate-700 text-slate-800 dark:text-slate-200 w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-transform duration-300 hover:scale-110">
+        <i class="fas fa-sun"></i>
+    </button>
+
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const htmlEl = document.documentElement;
+
+        if (localStorage.getItem('theme') === 'dark') {
+            htmlEl.classList.add('dark');
+            themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        } else {
+            htmlEl.classList.remove('dark');
+            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        }
+
+        themeToggle.addEventListener('click', () => {
+            htmlEl.classList.toggle('dark');
+            if (htmlEl.classList.contains('dark')) {
+                localStorage.setItem('theme', 'dark');
+                themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+            } else {
+                localStorage.setItem('theme', 'light');
+                themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+            }
+        });
+    </script>
+
+</body>
+</html>

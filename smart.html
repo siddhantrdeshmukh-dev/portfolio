@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project: Software Smart Lab - Siddhant Deshmukh</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* slate-50 */
+            color: #334155; /* slate-700 */
+        }
+        .back-link {
+            transition: transform 0.3s ease;
+        }
+        .back-link:hover {
+            transform: translateX(-5px);
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+</head>
+<body class="antialiased bg-slate-50 dark:bg-slate-900 text-slate-700 dark:text-slate-300 transition-colors duration-300">
+
+    <header class="bg-white dark:bg-slate-800 shadow-sm sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="index.html" class="back-link text-orange-500 dark:text-orange-400 font-semibold">
+                <i class="fas fa-arrow-left mr-2"></i>
+                Back to Portfolio
+            </a>
+            <p class="text-xl font-bold text-slate-800 dark:text-white">Siddhant Deshmukh</p>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-12 md:py-20">
+
+        <section class="text-center mb-16">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-slate-900 dark:text-white mb-4">Software: Smart Lab</h1>
+            <p class="text-lg text-slate-500 dark:text-slate-400 max-w-3xl mx-auto">An integrated educational management system designed to streamline academic operations for students, principals, and administrators.</p>
+        </section>
+
+        <section class="mb-16">
+            <img src="images\smart1.jpg" alt="Software Smart Lab" class="w-full h-auto rounded-xl shadow-2xl object-cover">
+        </section>
+
+        <section class="grid md:grid-cols-3 gap-12">
+            <div class="md:col-span-1">
+                <div class="bg-white dark:bg-slate-800 p-6 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold text-slate-800 dark:text-white mb-4 border-b border-slate-200 dark:border-slate-700 pb-2">Project Info</h3>
+                    <ul class="space-y-3 text-slate-600 dark:text-slate-300">
+                        <li><strong class="font-semibold text-slate-700 dark:text-slate-200">My Role:</strong> Full Stack Developer / Project Lead</li>
+                        <li><strong class="font-semibold text-slate-700 dark:text-slate-200">Technology:</strong> Web-based Application (e.g., React, Node.js, MongoDB)</li>
+                        <li><strong class="font-semibold text-slate-700 dark:text-slate-200">Core Features:</strong> Attendance, Homework, Lecture Management</li>
+                        <li><strong class="font-semibold text-slate-700 dark:text-slate-200">Key Achievement:</strong> Enhanced Academic Workflow & Communication</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="md:col-span-2">
+                <div class="space-y-6 text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
+                    <h3 class="text-2xl font-bold text-slate-800 dark:text-white">Project Overview</h3>
+                    <p>
+                        Smart Lab is a comprehensive educational management system designed to bring efficiency and transparency to academic institutions. It provides distinct interfaces and functionalities tailored for students, principals, and administrators, centralizing key school operations.
+                    </p>
+                    <h3 class="text-2xl font-bold text-slate-800 dark:text-white mt-4">Key Features & Responsibilities</h3>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li><strong>Student Module:</strong> Enables students to view their attendance records, access assigned homework, submit assignments, and watch lecture videos.</li>
+                        <li><strong>Principal Module:</strong> Provides an overview of school-wide attendance, staff performance, and educational content. Principals can monitor progress and generate reports.</li>
+                        <li><strong>Admin Module:</strong> Full control over user accounts (students, teachers, principals), course management, content upload (homework, lecture videos), and attendance tracking configuration.</li>
+                        <li>Developed secure user authentication and authorization systems to ensure data integrity and role-based access.</li>
+                        <li>Implemented robust database solutions to efficiently store and retrieve attendance, assignment, and multimedia content.</li>
+                        <li>Designed intuitive UI/UX for each user role to ensure ease of use and accessibility across devices.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-20">
+            <h2 class="text-3xl font-bold text-slate-800 dark:text-white mb-8 text-center">System Features Gallery</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <div class="rounded-lg shadow-md overflow-hidden">
+                    <video autoplay loop muted class="w-full h-full object-cover">
+                        <source src="https://videos.pexels.com/video-files/3129959/3129959-hd_1280_720_25fps.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <img src="images\smart2.jpg" alt="Student Dashboard" class="rounded-lg shadow-md w-full h-full object-cover">
+                <img src="images\smart3.jpg" alt="Admin Interface" class="rounded-lg shadow-md w-full h-full object-cover">
+                <img src="images\smart4.jpg" alt="Attendance Tracking" class="rounded-lg shadow-md w-full h-full object-cover">
+                <img src="images\smart5.jpg" alt="Homework Management" class="rounded-lg shadow-md w-full h-full object-cover">
+                <img src="images\smart7.jpg" alt="Lecture Videos" class="rounded-lg shadow-md w-full h-full object-cover">
+            </div>
+        </section>
+        
+    </main>
+
+    <footer class="bg-slate-800 dark:bg-slate-950 text-white mt-10">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p>&copy; 2024 Siddhant Deshmukh. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <button id="theme-toggle" class="fixed bottom-5 right-5 z-50 bg-white dark:bg-slate-700 text-slate-800 dark:text-slate-200 w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-transform duration-300 hover:scale-110">
+        <i class="fas fa-sun"></i>
+    </button>
+
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const htmlEl = document.documentElement;
+
+        if (localStorage.getItem('theme') === 'dark') {
+            htmlEl.classList.add('dark');
+            themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        } else {
+            htmlEl.classList.remove('dark');
+            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        }
+
+        themeToggle.addEventListener('click', () => {
+            htmlEl.classList.toggle('dark');
+            if (htmlEl.classList.contains('dark')) {
+                localStorage.setItem('theme', 'dark');
+                themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+            } else {
+                localStorage.setItem('theme', 'light');
+                themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+            }
+        });
+    </script>
+
+</body>
+</html>
