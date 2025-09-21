@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siddhant Deshmukh - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" xintegrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f1f5f9; /* slate-100 */
+            color: #334155; /* slate-700 */
+        }
+        .section-title {
+            border-bottom: 3px solid #2563eb; /* blue-600 */
+            padding-bottom: 8px;
+            display: inline-block;
+        }
+        .nav-link {
+            position: relative;
+            transition: color 0.3s;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #2563eb;
+            transition: width 0.3s ease-in-out;
+        }
+        .nav-link:hover::after, .nav-link.active::after {
+            width: 100%;
+        }
+        .nav-link:hover, .nav-link.active {
+            color: #1e3a8a; /* blue-900 */
+        }
+
+        /* --- Horizontal Project Section Styles --- */
+        #projects-section {
+            background-color: #e2e8f0; /* slate-200 */
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+        }
+        .dark #projects-section {
+            background-color: #1e293b; /* slate-800 */
+        }
+        .projects-wrapper {
+            position: relative;
+        }
+        #projects {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow-x: auto;
+            gap: 2rem;
+            padding: 1rem;
+            /* For hiding the scrollbar */
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none;  /* IE and Edge */
+        }
+        #projects::-webkit-scrollbar {
+            display: none; /* Chrome, Safari, and Opera */
+        }
+
+        .project-section {
+            width: 400px;
+            height: 500px;
+            flex-shrink: 0;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            border-radius: 0.75rem;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+        .project-section:hover {
+            transform: scale(1.03);
+        }
+
+        .project-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            z-index: 1;
+        }
+
+        .project-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 2rem;
+        }
+
+        /* --- ADDED: Arrow Button Styles --- */
+        .scroll-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+            background-color: rgba(255, 255, 255, 0.8);
+            color: #1e293b;
+            border: none;
+            border-radius: 50%;
+            width: 3rem;
+            height: 3rem;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: all 0.2s ease;
+        }
+        .scroll-button:hover {
+            background-color: white;
+            transform: translateY(-50%) scale(1.1);
+        }
+        .dark .scroll-button {
+            background-color: rgba(45, 55, 72, 0.8);
+            color: #e2e8f0;
+        }
+        .dark .scroll-button:hover {
+             background-color: #2d3748;
+        }
+        #scroll-left-button {
+            left: -1.5rem;
+        }
+        #scroll-right-button {
+            right: -1.5rem;
+        }
+        
+        .animated-section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .animated-section.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
+</head>
+<body class="antialiased dark:bg-slate-900 dark:text-slate-300 transition-colors duration-300">
+
+    <header id="header" class="bg-white/90 backdrop-blur-lg fixed top-0 left-0 right-0 z-50 shadow-sm dark:bg-slate-800/90">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-slate-800 dark:text-white">Siddhant Deshmukh</a>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="nav-link text-slate-600 dark:text-slate-300 font-medium">Home</a>
+                <a href="#about" class="nav-link text-slate-600 dark:text-slate-300 font-medium">About</a>
+                <a href="#skills" class="nav-link text-slate-600 dark:text-slate-300 font-medium">Skills</a>
+                <a href="#projects" class="nav-link text-slate-600 dark:text-slate-300 font-medium">Projects</a>
+                <a href="#contact" class="nav-link text-slate-600 dark:text-slate-300 font-medium">Contact</a>
+            </div>
+            <button id="mobile-menu-button" class="md:hidden text-slate-800 dark:text-white">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-white dark:bg-slate-800 border-t border-slate-200 dark:border-slate-700">
+            <a href="#home" class="block py-3 px-6 text-sm text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700">Home</a>
+            <a href="#about" class="block py-3 px-6 text-sm text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700">About</a>
+            <a href="#skills" class="block py-3 px-6 text-sm text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700">Skills</a>
+            <a href="#projects" class="block py-3 px-6 text-sm text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700">Projects</a>
+            <a href="#contact" class="block py-3 px-6 text-sm text-slate-600 dark:text-slate-300 hover:bg-slate-50 dark:hover:bg-slate-700">Contact</a>
+        </div>
+    </header>
+
+    <main>
+
+        <section id="home" class="min-h-screen flex items-center justify-center text-center bg-slate-100 dark:bg-slate-900">
+            <div class="grid md:grid-cols-2 gap-10 items-center container mx-auto px-6">
+                <div class="text-center md:text-left">
+                    <h1 class="text-5xl md:text-7xl font-extrabold text-slate-900 dark:text-white mb-4 leading-tight">
+                        Siddhant Deshmukh
+                    </h1>
+                    <p class="text-2xl md:text-3xl text-blue-600 dark:text-blue-400 font-semibold mb-6">
+                        Business & Technical Innovator
+                    </p>
+                    <p class="text-lg text-slate-600 dark:text-slate-400 max-w-xl mx-auto md:mx-0">
+                        A customer-focused professional with a passion for learning and growing in a high-impact environment.
+                    </p>
+                    <div class="mt-8">
+                        <a href="#projects" class="bg-blue-800 text-white font-bold  py-6 px-40 rounded-full hover:bg-blue-800 transition-all duration-300 transform hover:scale-200">
+                            Explore My Projects & Events
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden md:flex justify-center">
+                    <img src="images/sid.jpg" alt="Siddhant Deshmukh" class="rounded-full w-110 h-110 object-cover border-8 border-white dark:border-slate-700 shadow-2xl">
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="py-20 bg-white dark:bg-slate-800">
+            <div class="container mx-auto px-6 animated-section">
+                <h2 class="section-title text-3xl font-bold text-slate-800 dark:text-white mb-12 text-center"><i class="fas fa-user-circle mr-3 text-blue-500 dark:text-blue-400"></i>About Me</h2>
+                <div class="max-w-4xl mx-auto p-8 md:p-12 rounded-xl">
+                    <p class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed text-center">
+                        Motivated and adaptable individual with hands-on experience in business development, field execution, and client on-boarding. As a quick learner, I can personally vouch for the value, convenience, and transparency NoBroker brings to tenants. I'm eager to contribute to a team that values innovation, dedication, and customer-focused execution, while continuing to learn and grow in a high-impact environment.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="skills" class="py-20 bg-slate-50 dark:bg-slate-800">
+            <div class="container mx-auto px-6 animated-section">
+                <h2 class="section-title text-3xl font-bold text-slate-800 dark:text-white mb-12 text-center"><i class="fas fa-cogs mr-3 text-blue-500 dark:text-blue-400"></i>Skills & Abilities</h2>
+                <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-6 text-center">
+                    <div class="bg-white dark:bg-slate-700 p-5 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex items-center justify-center">
+                        <p class="font-semibold text-slate-700 dark:text-slate-200">B2B Communication & Client Onboarding </p>
+                    </div>
+                    <div class="bg-white dark:bg-slate-700 p-5 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex items-center justify-center">
+                        <p class="font-semibold text-slate-700 dark:text-slate-200">Lead Generation & Negotiation </p>
+                    </div>
+                    <div class="bg-white dark:bg-slate-700 p-5 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex items-center justify-center">
+                        <p class="font-semibold text-slate-700 dark:text-slate-200">Sales Pitches & Conversion Strategy </p>
+                    </div>
+                    <div class="bg-white dark:bg-slate-700 p-5 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex items-center justify-center">
+                        <p class="font-semibold text-slate-700 dark:text-slate-200">Vendor Management & Cost Optimization </p>
+                    </div>
+                    <div class="bg-white dark:bg-slate-700 p-5 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex items-center justify-center">
+                        <p class="font-semibold text-slate-700 dark:text-slate-200">Procurement & Resource Planning </p>
+                    </div>
+                    <div class="bg-white dark:bg-slate-700 p-5 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex items-center justify-center">
+                        <p class="font-semibold text-slate-700 dark:text-slate-200">Field Operations & Deployment </p>
+                    </div>
+                     <div class="bg-white dark:bg-slate-700 p-5 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex items-center justify-center">
+                        <p class="font-semibold text-slate-700 dark:text-slate-200">Campaign Planning & Brand Positioning </p>
+                    </div>
+                     <div class="bg-white dark:bg-slate-700 p-5 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 flex items-center justify-center">
+                        <p class="font-semibold text-slate-700 dark:text-slate-200">Team Collaboration & Public Speaking </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects-section">
+            <div class="container mx-auto">
+                <h2 class="section-title text-3xl font-bold text-slate-800 dark:text-white mb-12 text-center"><i class="fas fa-project-diagram mr-3 text-blue-500 dark:text-blue-400"></i>Projects</h2>
+                <div class="projects-wrapper">
+                    <button id="scroll-left-button" class="scroll-button"><i class="fas fa-chevron-left"></i></button>
+                    <div id="projects">
+                        <section class="project-section" style="background-image: url('https://www.lifewire.com/thmb/yV9eAYhjDllfTKnIxsufLGyQgJc=/3400x2267/filters:no_upscale():max_bytes(150000):strip_icc()/microphone-modern-radio-station-broadcasting-studio-683362050-14b3a502e3184042be5d23ed0eae9d62.jpg');">
+                            <div class="project-content">
+                                <h3 class="text-4xl font-extrabold mb-4">Community Radio</h3>
+                                <p class="text-lg mb-8">Led the establishment of a community radio station.</p>
+                                <a href="Radio.html" class="bg-white text-blue-600 font-bold py-3 px-8 rounded-full hover:bg-slate-200 transition-all duration-300">Learn More</a>
+                            </div>
+                        </section>
+                        <section class="project-section" style="background-image: url('https://th.bing.com/th/id/R.5811f81d94382b902db3da438671763d?rik=BVnThi%2fcYOEGBA&riu=http%3a%2f%2fbollywoodadda.in%2fwp-content%2fuploads%2f2022%2f07%2fChhotu-Maharaj-3-1280x720.jpg&ehk=KSJUdFLrJoOpWHpUuXItQU%2fRRyjC%2buCQGcjE1ysqiCY%3d&risl=&pid=ImgRaw&r=0');">
+                            <div class="project-content">
+                                <h3 class="text-4xl font-extrabold mb-4">Chotu Maharaj</h3>
+                                <p class="text-lg mb-8">Coordinated franchise operations for a cinema chain.</p>
+                                <a href="Chotu.html" class="bg-white text-orange-500 font-bold py-3 px-8 rounded-full hover:bg-slate-200 transition-all duration-300">Learn More</a>
+                            </div>
+                        </section>
+                        <section class="project-section" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM7PkL-x_XRY0VLkfe3corsipQ6Qcke6JNgA&s');">
+                            <div class="project-content">
+                                <h3 class="text-4xl font-extrabold mb-4">Anchoring</h3>
+                                <p class="text-lg mb-8">Hosted the 25th-anniversary celebration of Pillai College.</p>
+                                <a href="anchor.html" class="bg-white text-lime-500 font-bold py-3 px-8 rounded-full hover:bg-slate-200 transition-all duration-300">Learn More</a>
+                            </div>
+                        </section>
+                        <section class="project-section" style="background-image: url('https://tse3.mm.bing.net/th/id/OIP.LxAo5-FTfQOjMYaUctg1JQHaFw?rs=1&pid=ImgDetMain&o=7&rm=3');">
+                            <div class="project-content">
+                                <h3 class="text-4xl font-extrabold mb-4">Tesla Coil</h3>
+                                <p class="text-lg mb-8">Designed and built a functional Tesla coil.</p>
+                                <a href="Tesla.html" class="bg-white text-purple-600 font-bold py-3 px-8 rounded-full hover:bg-slate-200 transition-all duration-300">Learn More</a>
+                            </div>
+                        </section>
+                        <section class="project-section" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQnWdKColQEP4kI5sV7_FFD7xwJlrbNSqI9w&s');">
+                            <div class="project-content">
+                                <h3 class="text-4xl font-extrabold mb-4">Smart Lab</h3>
+                                <p class="text-lg mb-8">An integrated educational management system designed to streamline academic operations for students, principals, and administrators.</p>
+                                <a href="smart.html" class="bg-white text-teal-500 font-bold py-3 px-8 rounded-full hover:bg-slate-200 transition-all duration-300">Learn More</a>
+                            </div>
+                        </section>
+                        <section class="project-section" style="background-image: url('https://static.wixstatic.com/media/9e43e7_39bf703dd3474ccb91352033317d14b4~mv2.png/v1/fill/w_980,h_551,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/9e43e7_39bf703dd3474ccb91352033317d14b4~mv2.png');">
+                            <div class="project-content">
+                                <h3 class="text-4xl font-extrabold mb-4">Spark Racing</h3>
+                                <p class="text-lg mb-8">Developed a business plan for a Formula Student team.</p>
+                                <a href="Spark.html" class="bg-white text-green-600 font-bold py-3 px-8 rounded-full hover:bg-slate-200 transition-all duration-300">Learn More</a>
+                            </div>
+                        </section>
+                        <section class="project-section" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScxVpRtzbmnBEC2cj3ciITDbY9oD5iSaR14A&s');">
+                            <div class="project-content">
+                                <h3 class="text-4xl font-extrabold mb-4">Body Naturals</h3>
+                                <p class="text-lg mb-8">Developed a business concept for an organic skincare brand.</p>
+                                <a href="Body.html" class="bg-white text-pink-500 font-bold py-3 px-8 rounded-full hover:bg-slate-200 transition-all duration-300">Learn More</a>
+                            </div>
+                        </section>
+                        <section class="project-section" style="background-image: url('https://www.build-electronic-circuits.com/wp-content/uploads/2021/06/Inside-555-timer-sketched.png');">
+                            <div class="project-content">
+                                <h3 class="text-4xl font-extrabold mb-4">Timer 555</h3>
+                                <p class="text-lg mb-8">Created various electronic circuits using the 555 timer IC.</p>
+                                <a href="timmer555.html" class="bg-white text-amber-500 font-bold py-3 px-8 rounded-full hover:bg-slate-200 transition-all duration-300">Learn More</a>
+                            </div>
+                        </section>
+                        <section class="project-section" style="background-image: url('https://www.shutterstock.com/image-photo/office-workplace-table-report-page-600nw-1403134820.jpg');">
+                            <div class="project-content">
+                                <h3 class="text-4xl font-extrabold mb-4">Stock Report</h3>
+                                <p class="text-lg mb-8">Automated Daily Stock Report for Petroleum Retail.</p>
+                                <a href="dsr.html" class="bg-white text-indigo-500 font-bold py-3 px-8 rounded-full hover:bg-slate-200 transition-all duration-300">Learn More</a>
+                            </div>
+                        </section>
+                    </div>
+                    <button id="scroll-right-button" class="scroll-button"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact" class="py-20 bg-slate-800 dark:bg-slate-900 text-white">
+            <div class="container mx-auto px-6 text-center animated-section">
+                <h2 class="text-3xl font-bold mb-4">Get In Touch</h2>
+                <p class="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">I'm always open to discussing new projects, creative ideas, or opportunities to be part of an amazing team. Feel free to reach out.</p>
+                <!-- This is the mailto link that opens the user's email client -->
+                <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJZbjrzpNmwxZCHDZjkCTDHCKNtCchKJmrMlbVjtvltGZgszfsfzRLKjWtcpbSdBZblqfgB" class="inline-block bg-blue-600 text-white font-bold py-4 px-10 rounded-full hover:bg-blue-500 transition-all duration-300 transform hover:scale-105 text-lg">
+                    siddhantrdeshmukh@gmail.com
+                </a>
+            </div>
+        </section>
+
+    </main>
+    
+    <footer class="bg-slate-900 dark:bg-slate-950 text-white">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <p>&copy; 2025 Siddhant Deshmukh. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <button id="theme-toggle" class="fixed bottom-5 right-5 z-50 bg-white dark:bg-slate-700 text-slate-800 dark:text-slate-200 w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-transform duration-300 hover:scale-110">
+        <i class="fas fa-sun"></i>
+    </button>
+
+    <script>
+        // --- Mobile Menu Toggle ---
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelectorAll('#mobile-menu a, #header .nav-link');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (!mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+
+        // --- Scroll Animations (for About, Skills, Contact) ---
+        const animatedSections = document.querySelectorAll('.animated-section');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1 
+        });
+
+        animatedSections.forEach(section => {
+            observer.observe(section);
+        });
+
+        // --- Theme Toggle Script ---
+        const themeToggle = document.getElementById('theme-toggle');
+        const htmlEl = document.documentElement;
+
+        if (localStorage.getItem('theme') === 'dark') {
+            htmlEl.classList.add('dark');
+            themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+        } else {
+            htmlEl.classList.remove('dark');
+            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        }
+
+        themeToggle.addEventListener('click', () => {
+            htmlEl.classList.toggle('dark');
+            if (htmlEl.classList.contains('dark')) {
+                localStorage.setItem('theme', 'dark');
+                themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+            } else {
+                localStorage.setItem('theme', 'light');
+                themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+            }
+        });
+        
+        // --- ADDED: Horizontal Scroll Buttons Script ---
+        document.addEventListener('DOMContentLoaded', () => {
+            const projectsContainer = document.getElementById('projects');
+            const scrollLeftButton = document.getElementById('scroll-left-button');
+            const scrollRightButton = document.getElementById('scroll-right-button');
+            
+            // The amount to scroll will be the width of one card plus the gap
+            const scrollAmount = 400 + 32; // 400px card width + 2rem (32px) gap
+
+            scrollLeftButton.addEventListener('click', () => {
+                projectsContainer.scrollBy({
+                    left: -scrollAmount,
+                    behavior: 'smooth'
+                });
+            });
+
+            scrollRightButton.addEventListener('click', () => {
+                projectsContainer.scrollBy({
+                    left: scrollAmount,
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+    </script>
+
+</body>
+</html>
